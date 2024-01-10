@@ -1,0 +1,75 @@
+#!/bin/bash
+
+if [ "$1" = "--help" ]; then
+    echo "internsctl --help - Print this help"
+	echo "internsctl --version - Print version of the command"
+	echo "internsctl cpu getinfo - Print information about cpu"
+	echo "internsctl memory getinfo - Print information about memory"
+	echo "internsctl user create - Create a new user"
+	echo "internsctl user list - Print list of all users"
+	echo "internsctl user list --sudo-only - Print users with sudo priviledges"
+	echo "internsctl file getinfo <file-name> - Print information about the file"
+	echo "internsctl file getinfo --size <file-name> - Print size of the file"
+echo "internsctl file getinfo --owner <file-name> - Print owner of the file"
+echo "internsctl file getinfo --permissions <file-name> - Print permissions of the file"
+echo "internsctl file getinfo --last-modified <file-name> - Print last modification time of the file"
+fi
+
+if [ "$1" = "--version" ]; then
+    echo "Version: v0.1.0"
+fi
+
+if [ "$1" = "cpu" -a "$2" = "getinfo" ]; then
+    lscpu
+fi
+
+if [ "$1" = "memory" -a "$2" = "getinfo" ]; then
+    free
+fi
+
+if [ "$1" = "user" -a "$2" = "create" ]; then
+    sudo useradd $3
+fi
+
+if [ "$1" = "user" -a "$2" = "list" -a "$3" = "--sudo-only" ]; then
+    grep -Po '^sudo.+:\K.*$' /etc/group
+	exit
+fi
+
+if [ "$1" = "user" -a "$2" = "list" ]; then
+    cut -d: -f1 /etc/passwd
+fi
+
+if [ "$1" = "file" -a "$2" = "getinfo" -a "$3" = "--size" ]; then
+	stat -c "%B" $4
+	exit
+fi
+
+if [ "$1" = "file" -a "$2" = "getinfo" -a "$3" = "--permissions" ]; then
+        stat -c "%A" $4
+        exit
+fi
+
+if [ "$1" = "file" -a "$2" = "getinfo" -a "$3" = "--owner" ]; then
+        stat -c "%U" $4
+        exit
+fi
+
+if [ "$1" = "file" -a "$2" = "getinfo" -a "$3" = "--last-modified" ]; then
+        stat -c "%y" $4
+        exit
+fi
+
+if [ "$1" = "file" -a "$2" = "getinfo" ]; then
+    FILE=$(stat -c "%n" $3)
+	ACCESS=$(stat -c "%A" $3)
+	SIZE=$(stat -c "%B" $3)
+	OWNER=$(stat -c "%U" $3)
+	MODIFY=$(stat -c "%y" $3)
+
+	echo "File: $FILE"
+	echo "Access: $ACCESS"
+	echo "Size(B): $SIZE"
+	echo "Owner: $OWNER"
+	echo "Modify: $MODIFY"
+fi
