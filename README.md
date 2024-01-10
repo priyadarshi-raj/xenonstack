@@ -48,3 +48,51 @@ Generate custom Linux commands with ease!
   ### Architecture
   
   ![image](https://github.com/priyadarshi-raj/xenonstack/assets/90023144/73864774-6466-46c9-a5ed-4d0017ab98f6)
+
+## Open Science Platform
+
+### Description
+Open Science Platform is a collaborative space built on the MERN (MongoDB, Express.js, React, Node.js) stack. It provides a login system and allows users to contribute their projects related to open science. This platform encourages collaboration and the sharing of ideas, fostering a community of individuals passionate about advancing scientific research through openness and transparency.
+
+### Table of Contents
+Installation
+Usage
+Features
+Contributing
+License
+Contact
+Installation
+To set up the Open Science Platform on your local machine, follow these steps:
+
+### Clone the repository:
+bash
+Copy code
+git clone https://github.com/your-username/open-science-platform.git
+cd open-science-platform
+Install dependencies:
+bash
+Copy code
+npm install
+Set up the MongoDB database. Ensure you have a MongoDB server running, and update the connection string in the configuration files accordingly.
+
+### Start the server:
+
+bash
+Copy code
+npm start
+Usage
+Register or log in to the Open Science Platform.
+Explore existing projects or contribute your own by providing project details and documentation.
+Collaborate with other users, share insights, and contribute to the open science community.
+Features
+User Authentication: Secure login system for users to access and contribute to the platform.
+Project Contributions: Users can contribute their projects, including project details and documentation.
+Collaboration: Foster collaboration by allowing users to engage with each other's projects, share insights, and contribute to open science initiatives.
+Contributing
+We welcome contributions from the community. If you'd like to contribute to the Open Science Platform, please follow our Contribution Guidelines. We appreciate bug reports, feature requests, and pull requests.
+
+### Contact
+For any inquiries or assistance, please contact us at:
+
+Email: rajpriyadarshi95059@gmail.com
+GitHub: priyadarshi-raj
