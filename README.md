@@ -2,7 +2,7 @@
 Assessment for Tecnical round 2 :
 
 ## Linux custom script task
-Generate custom Linux commands with ease!
+Generating custom Linux commands !
 
   ### Overview
   This repository provides tools and resources for developing and deploying custom Linux commands using Bash scripts. It empowers you to create tailored commands that streamline your workflows and enhance your command-line experience.
