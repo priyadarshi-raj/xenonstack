@@ -39,8 +39,8 @@ const Navbar = () => {
               <NavLink to="/dashboard" className="mr-5 hover:text-gray-900">
                 Dashboard
               </NavLink>
-              <NavLink to="/listing" className="mr-5 hover:text-gray-900">
-                Listing
+              <NavLink to="/contact-us" className="mr-5 hover:text-gray-900">
+                Contact Us
               </NavLink>
             </nav>
             {!auth?.user ? (
