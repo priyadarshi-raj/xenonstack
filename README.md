@@ -46,8 +46,13 @@ Generate custom Linux commands with ease!
     Provides comprehensive documentation for command usage.
 
   ### Architecture
+  ![Architecture](https://github.com/priyadarshi-raj/xenonstack/assets/90023144/4463ce37-9a25-4346-bc00-6a5c19f06c3c)
   
+  ### Workflow  
   ![image](https://github.com/priyadarshi-raj/xenonstack/assets/90023144/73864774-6466-46c9-a5ed-4d0017ab98f6)
+
+ 
+  
 
 ## Open Science Platform
 
@@ -95,4 +100,5 @@ We welcome contributions from the community. If you'd like to contribute to the 
 For any inquiries or assistance, please contact us at:
 
 Email: rajpriyadarshi95059@gmail.com
+
 GitHub: priyadarshi-raj
