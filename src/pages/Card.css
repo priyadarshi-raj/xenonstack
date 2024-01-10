@@ -1,0 +1,202 @@
+.card {
+  width: 120%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #9EDDFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: 60%;
+  height: auto;
+}
+
+.sub-cards-container {
+  position: absolute;
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+
+}
+
+.sub-card {
+  flex: 1;
+  padding: 10px;
+  margin: 5%;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sub-card:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+  /* Increase size on hover */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.create-button {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 50%;
+  cursor: pointer;
+}
+
+.mySwiper-homepg {
+  background-color: white;
+  width: 90vw;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.create-button:hover {
+  background-color: #33BBC5;
+}
+
+xa {
+  text-decoration: none;
+}
+
+xa:hover {
+  text-decoration: underline;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.sub-card.selected .circle {
+  background-color: #219C90;
+}
+
+/* Media query for smaller screens (e.g., tablets and mobile) */
+@media (max-width: 768px) {
+  .card {
+    width: 80%;
+
+  }
+
+  .sub-cards-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+  }
+
+  .sub-card {
+    width: 100%;
+  }
+
+  .create-button {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+  }
+
+  .sub-cards-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+  }
+
+  .create-button {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Make the card smaller and more centered */
+  .card {
+    max-width: 100%;
+    margin: 0 auto;
+
+  }
+
+  /* Stack the sub-cards on top of each other */
+  .sub-cards-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+  }
+
+  /* Make the sub-cards smaller */
+  .sub-card {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  /* Move the create button below the sub-cards */
+  .create-button {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 412px) {
+
+  /* Make the card smaller and more centered */
+  .card {
+    max-width: 100%;
+    margin: 0 auto;
+    height: 200%;
+  }
+
+  /* Stack the sub-cards on top of each other */
+  .sub-cards-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+  }
+
+  /* Make the sub-cards smaller */
+  .sub-card {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  /* Move the create button below the sub-cards */
+  .create-button {
+    margin-top: 20px;
+  }
+
+  /* Make the text smaller */
+  body,
+  .card,
+  .sub-card,
+  .create-button {
+    font-size: 14px;
+  }
+
+  /* Hide the circle element */
+  .circle {
+    display: none;
+  }
+
+  /* Increase the font size of the sub-card titles */
+  .sub-card .title {
+    font-size: 16px;
+  }
+
+  /* Make the create button larger */
+  .create-button {
+    width: 100%;
+    margin-top: 80%;
+    padding: 15px 0;
+  }
+}
